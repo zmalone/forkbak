@@ -34,6 +34,7 @@ heroku config:set APP=$APP-backups \
   FORK_FROM_APP=$APP \
   HEROKU_API_KEY=$(heroku auth:token) \
   --app $APP-backups
+heroku git:remote -a $APP-backups
 git push heroku master
 ```
 
